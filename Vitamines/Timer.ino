@@ -16,13 +16,13 @@ String ParseTime(int seconds){
  
   String str = "";
   int time=s;
-  if (time/60/60<10) { Serial.print ("0"); }
+  if (time/60/60<10) { str += ("0"); }
   str += (time/60/60);
   str += (":");
-  if (time/60%60<10) { Serial.print ("0"); }
+  if (time/60%60<10) { str += ("0"); }
   str += ((time/60)%60);
   str += (":");
-  if (time%60<10) { Serial.print ("0"); }
+  if (time%60<10) { str += ("0"); }
   str += (time%60);
 
   return str;
